@@ -6,6 +6,7 @@ services:
     container_name: mariadb
     environment:
       MARIADB_ALLOW_EMPTY_ROOT_PASSWORD: "yes"
+      command: --log-error=/var/log/mysql/error.log
     ports:
       - "3306:3306"
     volumes:
